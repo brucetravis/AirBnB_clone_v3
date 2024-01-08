@@ -3,6 +3,9 @@ DevOps
 Python
 SysAdmin
 Scripting
+
+AUTHORS NAME: Bruce Ambundo
+
 CI/CD
  By: Guillaume, CTO at Holberton School
  Weight: 1
