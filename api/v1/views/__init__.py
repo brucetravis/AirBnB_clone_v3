@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-'''
-Creates a Blueprint instance with `url_prefix` set to `/api/v1`.
-'''
+
+# Creates a Blueprint instance with `url_prefix` set to `/api/v1`.
 
 
 from flask import Blueprint
-
-app_views = Blueprint('app_views', __name__, url_prefix='/api/v1')
-
 from api.v1.views.index import *
 from api.v1.views.states import *
 from api.v1.views.cities import *
@@ -16,19 +12,20 @@ from api.v1.views.users import *
 from api.v1.views.places import *
 from api.v1.views.places_reviews import *
 from api.v1.views.places_amenities import *
-
-api/v1/views/amenities.py
-
-#!/usr/bin/python3
-'''
-Creates a view for Amenity objects - handles all default RESTful API actions.
-'''
-
-# Import necessary modules
 from flask import abort, jsonify, request
 from models.amenity import Amenity
 from api.v1.views import app_views
 from models import storage
+
+
+app_views = Blueprint('app_views', __name__, url_prefix='/api/v1')
+
+
+api/v1/views/amenities.py
+
+#!/usr/bin/python3
+
+# Creates a view for Amenity objects - handles all default RESTful API actions.
 
 
 # Route for retrieving all Amenity objects
